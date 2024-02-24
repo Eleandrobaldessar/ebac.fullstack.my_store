@@ -82,7 +82,7 @@ header {
     padding-top: 20px; /* Adicionado espaço acima da seção */
 }
 
-/* Produstos */
+/* Produtos */
 .produtos {
     display: grid; /* Alterado para grid */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribui as produtos em várias colunas */
@@ -147,3 +147,73 @@ footer {
     margin-top: 20px;
 }
 
+/* Layout responsivo */
+@media screen and ( max-width: 767px) {
+    .produtos{
+        display: block;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos {
+        display: block;
+    }
+    
+    .produtos .produto {
+        margin-bottom: 32px;
+    }
+
+    header div.container {
+        flex-direction: column;
+    }
+
+    .submenu {
+        display: none;
+        position: relative;
+        width: 100%;
+        border: none;
+    }
+    
+    .submenu li {
+        display: block;
+        padding: 8px;
+    }
+    
+    .menu > li {
+        display: none;
+    }
+    
+    .botao-menu {
+        display: flex ;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    .botao-menu button {
+        padding: 8px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container{
+        max-width: 90%;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 49%);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .botao-menu{
+        display: none;
+    }
+}
